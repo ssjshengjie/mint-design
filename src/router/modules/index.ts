@@ -4,7 +4,7 @@ const routers: RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
-    component: () => import("@/App.vue"),
+    component: () => import("@/views/home.vue"),
     children: [
       {
         path: "/button",
