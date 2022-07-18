@@ -1,32 +1,38 @@
-@use "config" as *;
-@forward "config";
-//.mt-button
+@use 'config' as *;
+@forward 'config';
+
+
+// .z-button{}
 @mixin b($block) {
-  $B: $namespace + "-" + $block;
+  $B: $namespace+'-'+$block;
+
   .#{$B} {
     @content;
   }
 }
-//.mt-button.is-xxx
+
+// .z-button.is-desiabled
 @mixin when($state) {
   @at-root {
-    &.#{$state-perfix + $state} {
+    &.#{$state-prefix + $state} {
       @content;
     }
   }
 }
-//& --primary => .mt-butoon--primary
+
+// &--primary => .z-button--primary
 @mixin m($modifier) {
   @at-root {
-    #{& + $modifier-separator + $modifier} {
+    #{&+$modifier-separator+$modifier} {
       @content;
     }
   }
 }
-//$__header = > .mt-button__header
+
+// &__header  => .z-button__header
 @mixin e($element) {
   @at-root {
-    #{& + $element-separator + $element} {
+    #{&+$element-separator+$element} {
       @content;
     }
   }

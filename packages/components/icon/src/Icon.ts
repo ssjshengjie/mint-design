@@ -2,7 +2,7 @@ import { createNamespace } from "@mint-design/utils/create";
 import { computed, defineComponent, h, mergeProps } from "vue";
 import { iconProps } from "./prop";
 
-export const MIcon = defineComponent({
+export const MtIcon = defineComponent({
   name: "MtIcon",
   props: iconProps,
   setup(props) {
